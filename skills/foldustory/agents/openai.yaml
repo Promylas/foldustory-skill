@@ -1,0 +1,4 @@
+interface:
+  display_name: "FoldUStory 创作助手"
+  short_description: "授权连接自己的云作品，用自然语言编辑、检查开合并同步网页预览"
+  default_prompt: "使用 $foldustory 连接我的个人空间，在网页授权后编辑我选定的作品，检查预览并保存到云端。"

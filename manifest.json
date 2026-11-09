@@ -1,0 +1,52 @@
+{
+  "formatVersion": 1,
+  "name": "foldustory",
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 69,
+      "sha256": "51424bf4a36261ee8aef86d5ccbea1a01b9922fa016b408571861eb0f473463b"
+    },
+    {
+      "path": "install.mjs",
+      "bytes": 16393,
+      "sha256": "c8e0de51612798496d0e17e7cff6b848debce57637247e7c78e5a7995f6eaedb"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1079,
+      "sha256": "65c0c492c41c0c46ad413f053d3a105ba0085edd38754bdf371fdc2bc35f66b7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5776,
+      "sha256": "9103c05121b3ce53251e4f32a166b7c2f80ca78455d378819c74ba2a5b9771ec"
+    },
+    {
+      "path": "skills/foldustory/agents/openai.yaml",
+      "bytes": 311,
+      "sha256": "e7c255da02e74936b21eda1ed8f9dbd00a374b2beb2b32b62ca33b54fe9f2e1b"
+    },
+    {
+      "path": "skills/foldustory/scripts/client.mjs",
+      "bytes": 10539,
+      "sha256": "fdf59bd520d28d958b05c0d54d98b00c2143861225dada79f36a95405e70a8c2"
+    },
+    {
+      "path": "skills/foldustory/scripts/launch.mjs",
+      "bytes": 1118,
+      "sha256": "05f2ab57a8092f5c589d077e62bb3696d4eb22a3a606e560fae9ea830f8b6b56"
+    },
+    {
+      "path": "skills/foldustory/scripts/stdio.mjs",
+      "bytes": 7149,
+      "sha256": "70936ef1aa952c17063746ef55e10338320312247abad68aa61b7805c64f9921"
+    },
+    {
+      "path": "skills/foldustory/SKILL.md",
+      "bytes": 3323,
+      "sha256": "30021c53a08cfa96a8e1fc51e47cd58f9e1adbb76659e5be3d02c389935cf97d"
+    }
+  ]
+}

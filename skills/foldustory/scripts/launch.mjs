@@ -1,0 +1,10 @@
+import { spawn } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+if (Number(process.versions.node.split('.')[0]) < 22) throw Error('Node.js 22 or later is required.');
+if (process.argv.length !== 2) throw Error('This connector has a fixed production origin and accepts no launch arguments.');
+const proxy = ['HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy'].some(name => process.env[name]);
+if (proxy && !process.allowedNodeEnvironmentFlags.has('--use-env-proxy')) throw Error('This Node version cannot use the configured proxy. Update Node.js to a version supporting --use-env-proxy.');
+const child = spawn(process.execPath, [...(proxy ? ['--use-env-proxy'] : []), fileURLToPath(new URL('./stdio.mjs', import.meta.url))], { stdio: 'inherit', windowsHide: true, shell: false, env: process.env });
+child.once('error', () => { process.stderr.write('Could not start the personal-space connector.\n'); process.exitCode = 1; });
+child.once('exit', code => { process.exitCode = code ?? 1; });
+for (const signal of ['SIGINT', 'SIGTERM']) process.once(signal, () => child.kill(signal));
