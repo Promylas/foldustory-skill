@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "name": "foldustory",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "files": [
     {
       "path": ".gitattributes",
@@ -10,8 +10,8 @@
     },
     {
       "path": "install.mjs",
-      "bytes": 16393,
-      "sha256": "c8e0de51612798496d0e17e7cff6b848debce57637247e7c78e5a7995f6eaedb"
+      "bytes": 16192,
+      "sha256": "89d3e785f2ad117f2332d99fbdd724190587a86ac4204b99c6ac264de49cd70d"
     },
     {
       "path": "LICENSE",
@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5776,
-      "sha256": "9103c05121b3ce53251e4f32a166b7c2f80ca78455d378819c74ba2a5b9771ec"
+      "bytes": 7582,
+      "sha256": "ad672ce4d635668cd3269059f006b71be4b4b7f8e801cc7408a03a94fe8f390a"
     },
     {
       "path": "skills/foldustory/agents/openai.yaml",
@@ -30,23 +30,28 @@
     },
     {
       "path": "skills/foldustory/scripts/client.mjs",
-      "bytes": 10539,
-      "sha256": "fdf59bd520d28d958b05c0d54d98b00c2143861225dada79f36a95405e70a8c2"
+      "bytes": 10408,
+      "sha256": "3a065eb611c21373984077ef81455d2e8f43340f72b5b4e30bd005f765749961"
     },
     {
       "path": "skills/foldustory/scripts/launch.mjs",
-      "bytes": 1118,
-      "sha256": "05f2ab57a8092f5c589d077e62bb3696d4eb22a3a606e560fae9ea830f8b6b56"
+      "bytes": 1108,
+      "sha256": "124e9ad2345ab4987dcc294170829b5cac17a5dfd37b3d26225d2311215f0c81"
     },
     {
       "path": "skills/foldustory/scripts/stdio.mjs",
-      "bytes": 7149,
-      "sha256": "70936ef1aa952c17063746ef55e10338320312247abad68aa61b7805c64f9921"
+      "bytes": 7086,
+      "sha256": "ded34be679c95a3416577b96f4b4aeb82e746902b5d2bc243ab14f6a4347120e"
     },
     {
       "path": "skills/foldustory/SKILL.md",
-      "bytes": 3323,
-      "sha256": "30021c53a08cfa96a8e1fc51e47cd58f9e1adbb76659e5be3d02c389935cf97d"
+      "bytes": 3933,
+      "sha256": "a5b1b9e73b60f29dca65c9eef0e1164906a750318b95e127f8a3862991a0b635"
+    },
+    {
+      "path": "usage.json",
+      "bytes": 1082,
+      "sha256": "84f0f02ba07bdd9bbb5a68bd7612d9351c8d5f61d095f02c275e4fe4406ae7d9"
     }
   ]
 }

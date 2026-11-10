@@ -2,7 +2,9 @@
 
 把下面这句话复制给 Codex：
 
-> 请从 https://github.com/Promylas/foldustory-skill 安装 FoldUStory Skill，检查安装内容并先运行安装器的 dry-run，再安装并连接 https://foldustory.com/agent。由我在网页登录 Creator 账号、选择并授权自己的作品后，按我的描述编辑、检查开合并保存到云端。
+> 请从 https://github.com/Promylas/foldustory-skill 安装 FoldUStory Skill，先检查内容并运行 node install.mjs --dry-run，再安装并连接 https://foldustory.com/agent。如果已经安装，请保留现有配置并先查询可用功能。由我在网页登录 Creator 账号、选择并授权自己的测试作品后，按我的描述编辑、检查预览并保存到云端。
+
+安装包版本 **1.1.0**。嵌套机关创作正在指定账号和测试作品中开放，以所选作品返回的功能列表为准；原有基础编辑仍可使用。已有连接器可继续连接，无需为获得服务端开放的函数重复安装。
 
 ## 第一次使用
 
@@ -41,6 +43,12 @@
 
 实际函数以连接后的 `describe-tools` 和服务端允许列表为准，并非整个工作台的所有功能。没有模板批量导出、未授权作品读取或本机文件读取工具。几何模拟不能代替实体试做。
 
+已开放嵌套创作的作品还可以查询真实纸面和折线，在已有机关上继续安装 V 折、台阶或纸面，通过统一参数修改父机关，并让后代跟随。浏览器与 Agent 共用撤销历史。可以复制给 Codex：
+
+> 先查询这份测试作品的可用函数和图层树。如果支持嵌套创作，在一个合适的父机关上添加子机关，先预览安装位置，再检查父机关变化时子机关是否跟随；检查合上和展开，保留原图与连接关系，最后保存到云端并报告确认版本。
+
+暂未返回相关函数时，不要尝试绕过限制或读取平台模板。新机关由现有底层构造、安装和求解能力组合而成；这不等于能在网页中随意增加新的求解器代码。
+
 ## 如何工作
 
 ```text
@@ -63,6 +71,12 @@ Skill 指导选作品、查能力、检查版本和结果；Node.js 连接器传
 问题反馈：[GitHub Issues](https://github.com/Promylas/foldustory-skill/issues) 或 foldustory.support@gmail.com。请提供错误码和操作步骤，不附令牌或未经授权的作品。
 
 ## English quick start
+
+Copy this instruction to Codex:
+
+> Install the FoldUStory Skill from https://github.com/Promylas/foldustory-skill. Inspect its contents and run node install.mjs --dry-run before installing, then connect to https://foldustory.com/agent. If already installed, preserve the existing configuration and discover available functions first. I will sign in with my Creator account and authorize my own test work in the browser. Then edit as requested, check the preview, and save to the cloud.
+
+Package version **1.1.0**. Nested mechanism creation is being enabled for selected test accounts and works. Discover functions for the selected work first. Existing connectors and basic editing continue to work.
 
 Install Node.js 22+ and Codex CLI, download or clone this repository, then run `node install.mjs --dry-run` followed by `node install.mjs`. Reopen Codex and ask: **“Use $foldustory to connect to my FoldUStory space.”**
 

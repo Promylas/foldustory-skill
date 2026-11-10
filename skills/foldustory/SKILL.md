@@ -22,6 +22,8 @@ description: 通过网页登录授权连接 FoldUStory 个人空间，让 Creato
 
 修改后检查错误、上下文、验证结果和网页实际预览；涉及结构要实际合上再展开。排队不等于执行成功。薄纸模拟不能证明实体可制作性或自由翻片的唯一运动。保留完整原图、轮廓与模板元数据。
 
+若 describe-tools 返回统一创作函数：先用 describe-mechanism 读实际图层树和参数，用 get-assembly-surface 查询宿主生成的面、折线与默认参数；先 preview-stage-item 再 attach-stage-item。不要把新的面或折线臆造为独立书页。用 set-mechanism-parameter 调参，用 solve-mechanism 采样开合；检查父机关改变后子机关跟随、连接关系保留。浏览器与 Skill 共用撤销历史，不维护第二份本地模型。当前新增函数仅对指定账号和作品开放，未返回时按原有函数范围工作，不绕过服务端限制。
+
 ## 保存与撤销
 
 - `foldustory_space_save {projectId,requestId}` 显式保存，以服务端确认和云版本为完成依据。编辑副本、本机保存、排队均不等于云备份完成。
