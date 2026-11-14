@@ -4,7 +4,7 @@
 
 > 请从 https://github.com/Promylas/foldustory-skill 安装 FoldUStory Skill，先检查内容并运行 node install.mjs --dry-run，再安装并连接 https://foldustory.com/agent。如果已经安装，请保留现有配置并先查询可用功能。由我在网页登录 Creator 账号、选择并授权自己的测试作品后，按我的描述编辑、检查预览并保存到云端。
 
-安装包版本 **1.1.0**。嵌套机关创作正在指定账号和测试作品中开放，以所选作品返回的功能列表为准；原有基础编辑仍可使用。已有连接器可继续连接，无需为获得服务端开放的函数重复安装。
+安装包版本 **1.2.0**。Creator 可以在本人明确授权的作品中定义纸面、切线、折线和胶接，把自定义纸样装到立体书的真实折线上，再继续嵌套机关。以所选作品返回的功能列表为准。已有连接器仍可连接；更新 Skill 可获得新的结构创作说明。
 
 ## 第一次使用
 
@@ -30,24 +30,26 @@
 - 在 [Agent 授权页](https://foldustory.com/agent)随时撤销。也可让 Codex 断开；只有 `revoked: true` 才表示远端撤销成功，断网时请回网页撤销。
 - 退出网站账号撤销该登录会话的授权。授权页关闭或停止响应后，短期浏览器租约到期，Agent 停止工作；继续使用时回网页确认。
 - 不要把密码、验证码或浏览器令牌发给 Agent。连接器仅在进程内存保留临时访问令牌。
-- 预览修改和云保存是两步。遇到冲突、断网或结果未知，先检查作品与版本，不重复执行修改。编辑页可下载当前副本；原有云版本和原图按网站存档机制保留。
+- 预览修改和云保存是两步。遇到冲突、断网或结果未知，先检查作品与版本，不重复执行修改。工程 JSON 导出另行检查网站导出权益；编辑和云保存不消耗导出次数。原有云版本和原图按网站存档机制保留。
 - 本连接器不会把作品自动发布到模型广场，公开分享需要另外提交。
 
 ## 能做什么
 
 | 作品 | 当前能力 |
 | --- | --- |
-| 立体书 Scene | 查询组件和连接面、改参数、换图、复制/删除组件、调整书本尺寸、检查开合与约束、撤销/重做 |
-| 纸样 PaperPattern | 查询顶点/折痕/纸面，调整几何、构造纸样、预览与修改胶接、折叠与开合检查 |
+| 立体书 Scene | 查询组件和连接面、改参数、换图、复制/删除组件、调整书本尺寸；定义、预览、安装和更新自定义纸样机关，嵌套与父子跟随，撤销/重做 |
+| 纸样 PaperPattern | 从空白建立顶点、切线与折线，追加独立纸张；调整几何、安装书页、预览与修改胶接、多连接装配、折叠与开合检查 |
 | 制作草稿 | 读上下文、改名、保存；暂不支持完整素材制作流程 |
 
 实际函数以连接后的 `describe-tools` 和服务端允许列表为准，并非整个工作台的所有功能。没有模板批量导出、未授权作品读取或本机文件读取工具。几何模拟不能代替实体试做。
 
-已开放嵌套创作的作品还可以查询真实纸面和折线，在已有机关上继续安装 V 折、台阶或纸面，通过统一参数修改父机关，并让后代跟随。浏览器与 Agent 共用撤销历史。可以复制给 Codex：
+可以查询真实纸面和折线，在已有机关上继续安装 V 折、台阶或纸面，通过统一参数修改父机关，并让后代跟随。浏览器与 Agent 共用撤销历史。可以复制给 Codex：
 
 > 先查询这份测试作品的可用函数和图层树。如果支持嵌套创作，在一个合适的父机关上添加子机关，先预览安装位置，再检查父机关变化时子机关是否跟随；检查合上和展开，保留原图与连接关系，最后保存到云端并报告确认版本。
 
-暂未返回相关函数时，不要尝试绕过限制或读取平台模板。新机关由现有底层构造、安装和求解能力组合而成；这不等于能在网页中随意增加新的求解器代码。
+也可以说：“在我的空白纸样里，用顶点、切线、折线设计一个新的机关结构，先验证胶接和开合，再装到立体书里。不要覆盖已有作品。”Agent 的具体工作协议见[结构创作说明](skills/foldustory/references/structure-authoring.md)。
+
+每份自定义结构最多 64 个源顶点、96 条源边、16 个编译纸面、12 处胶接；每个 Scene 最多 4 个自定义纸样机关。可以构造模板之外的新组合，但求解仍使用网站现有的薄纸几何能力，不支持上传 JS/TS/WASM 或自定义物理求解器。不保证任意参考图都能还原，也不保证实体开合。暂未返回相关函数时，不绕过限制或读取平台模板。
 
 ## 如何工作
 
@@ -76,7 +78,7 @@ Copy this instruction to Codex:
 
 > Install the FoldUStory Skill from https://github.com/Promylas/foldustory-skill. Inspect its contents and run node install.mjs --dry-run before installing, then connect to https://foldustory.com/agent. If already installed, preserve the existing configuration and discover available functions first. I will sign in with my Creator account and authorize my own test work in the browser. Then edit as requested, check the preview, and save to the cloud.
 
-Package version **1.1.0**. Nested mechanism creation is being enabled for selected test accounts and works. Discover functions for the selected work first. Existing connectors and basic editing continue to work.
+Package version **1.2.0**. Creators can define vertices, cuts, creases and glue in their explicitly authorized own works, mount custom paper mechanisms on real scene creases, and nest components with shared undo. Discover functions first. Editing and cloud saving do not consume export allowances; project JSON export checks website export access separately. Existing connectors continue to work; update the Skill for the new authoring instructions. This uses the platform's bounded thin-paper solver, not uploaded executable code or a guarantee of physical manufacturability.
 
 Install Node.js 22+ and Codex CLI, download or clone this repository, then run `node install.mjs --dry-run` followed by `node install.mjs`. Reopen Codex and ask: **“Use $foldustory to connect to my FoldUStory space.”**
 

@@ -1,7 +1,7 @@
 {
   "formatVersion": 1,
   "name": "foldustory",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "files": [
     {
       "path": ".gitattributes",
@@ -20,13 +20,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 7582,
-      "sha256": "ad672ce4d635668cd3269059f006b71be4b4b7f8e801cc7408a03a94fe8f390a"
+      "bytes": 8661,
+      "sha256": "9f6d91f4bfbdbd08d2eb6562725d0031d042e35c6750db20484e0d033430d3d6"
     },
     {
       "path": "skills/foldustory/agents/openai.yaml",
       "bytes": 311,
       "sha256": "e7c255da02e74936b21eda1ed8f9dbd00a374b2beb2b32b62ca33b54fe9f2e1b"
+    },
+    {
+      "path": "skills/foldustory/references/structure-authoring.md",
+      "bytes": 3257,
+      "sha256": "676d9dba289bda8d3cafaf96512cea5ff8d93016c6ea4c7375b2b17d8d1da026"
     },
     {
       "path": "skills/foldustory/scripts/client.mjs",
@@ -45,13 +50,13 @@
     },
     {
       "path": "skills/foldustory/SKILL.md",
-      "bytes": 3933,
-      "sha256": "a5b1b9e73b60f29dca65c9eef0e1164906a750318b95e127f8a3862991a0b635"
+      "bytes": 4559,
+      "sha256": "5e081844c1f8415d3bd3c7990b10e7e8b0232fca4314d0af9a86df01d337e483"
     },
     {
       "path": "usage.json",
       "bytes": 1082,
-      "sha256": "84f0f02ba07bdd9bbb5a68bd7612d9351c8d5f61d095f02c275e4fe4406ae7d9"
+      "sha256": "7bb2d39fbedc1eb687280322c39ff94db0d66a1c67380982334a978545c5c4f4"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "repository": "https://github.com/Promylas/foldustory-skill",
   "authorization": "https://foldustory.com/agent",
-  "download": "/downloads/foldustory-v1.1.0.zip",
+  "download": "/downloads/foldustory-v1.2.0.zip",
   "installPrompt": {
     "zh": "请从 https://github.com/Promylas/foldustory-skill 安装 FoldUStory Skill，先检查内容并运行 node install.mjs --dry-run，再安装并连接 https://foldustory.com/agent。如果已经安装，请保留现有配置并先查询可用功能。由我在网页登录 Creator 账号、选择并授权自己的测试作品后，按我的描述编辑、检查预览并保存到云端。",
     "en": "Install the FoldUStory Skill from https://github.com/Promylas/foldustory-skill. Inspect its contents and run node install.mjs --dry-run before installing, then connect to https://foldustory.com/agent. If already installed, preserve the existing configuration and discover available functions first. I will sign in with my Creator account and authorize my own test work in the browser. Then edit as requested, check the preview, and save to the cloud."
